@@ -1,52 +1,159 @@
-*{
-    margin: 0;
-    padding: 0;
-    font-family: "Poppins", sans-serif;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
 }
 
-body{
-    background: black;
-    color: white;
+html {
+  scroll-behavior: smooth;
 }
 
-#header{
-    height: 100vh;
-    background-image: url(images/background.jpg);
-    background-size: 50%;
-    background-repeat: no-repeat;
-    background-position: right;
+body {
+  min-height: 100vh;
+  animation: fadeIn 3s;
+  color: white;
+  background: black;
 }
 
-nav{
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    flex-wrap: wrap;
-    padding-top: 10px;
-    padding-left: 15px;
+header {
+  height: 100vh;
+  background-size: 50%;
+  background-position: right;
+  background-repeat: no-repeat;
+  background-image: url(images/home.jpg);
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
-nav a{
-    font-size: 18px;
-    text-decoration: none;
-    position: relative;
-    color: white;
-    margin: 10px 20px;
+@keyframes typing {
+  from {
+    max-width: 0;
+  }
+  to {
+    max-width: 100%;
+  }
 }
 
-nav a::after{
-    content: '';
-    width: 0%;
-    height: 3px;
-    background: skyblue;
-    position: absolute;
-    left: 0;
-    bottom: -6px;
-    transition: .25s;
+@keyframes cursor {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: white;
+  }
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 15%;
+  margin-right: 50%;
+}
+
+.navbar ul li {
+  display: inline-block;
+  margin: 1%;
+  padding: 0;
+}
+
+.navbar ul li a {
+  color: white;
+  font-size: 18px;
+  position: relative;
+  text-decoration: none;
+}
+
+.navbar ul li a::after {
+  content: "";
+  width: 0;
+  height: 3px;
+  margin: auto;
+  bottom: -5px;
+  left: 0;
+  right: 0;
+  transition: 0.5s;
+  background: rgb(200, 16, 46);
+  position: absolute;
+}
+
+.navbar ul li a:hover::after {
+  width: 100%;
+}
+
+#head-text p {
+  font-size: 25px;
+  margin: 0 auto;
+}
+
+#head-text h1 {
+  font-size: 45px;
+  overflow: hidden;
+  border-right: 3px solid white;
+  white-space: nowrap;
+  margin: 0 auto;
+  animation: typing 5s, cursor 1s step-end infinite;
+  display: inline-block;
+}
+
+#head-text h1 span {
+  color: rgb(200, 16, 46);
+}
+  /* about */
+
+#about{
+  height: 100vh;
+  overflow-y: auto;
+}
+
+#about-me{
+  margin-top: 8.5%;
+  margin-bottom: 1%;
 
 }
 
-nav a:hover::after{
-    width: 100%;
+
+#about p{
+  font-size: 15px;
+  max-width: 90%;
+  margin: 0 auto;
 }
+.row{
+  display: flex;
+}
+
+.about-1{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  flex-basis: 50%;
+}
+
+.about-1 img{
+  height: 85vh;
+  border-radius: 35%;
+}
+
+.about-2{
+  flex-basis: 50%;
+  text-align: center;
+}
+
+.about-2 span{
+  color: red;
+  font-weight: 700;
+}
+
+.subtitle{
+  font-size: 35px;
+}
+
