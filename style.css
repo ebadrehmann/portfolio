@@ -237,36 +237,69 @@ header {
 
 #work{
   height: 100vh;
+  text-align: center;
+  padding-top: 3%;
 }
 
 .projects{
-  
-  grid-template-columns: none;
-  grid-template-rows: 50% 50%;
-  grid-auto-flow: column;
-  grid-gap: 50px;
-  align-items: center;
+  display: grid;
+  grid-template-columns: 40% 40%;
+  grid-gap: 100px;
+  justify-content: center;
+  margin-top: 5%;
 }
-  
-.project {
-  width: 80%;
-  margin: 0 auto;
-  border-radius: 10%;
+
+.project{
+  position: relative;
+  overflow: hidden;
+  border-radius: 5%;
+}
+
+.project img{
+  margin: auto;
+  width: 100%;
+  display: block;
+  transition: transform 0.5s;
+}
+
+.project:hover img {
+  transform: scale(1.03);
+}
+
+.project:hover .project-info {
+  height: 100%;
 }
 
 .project-info {
-  font-size: 12px;
+  height: 0%;
+  position: absolute;
+  overflow: hidden;
+  left: 0;
+  bottom: 0;
+  background: linear-gradient(to top, black, rgba(255, 0, 0, 0));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 15%;
+  transition: height 0.5s;
 }
 
-.project-info h3{
-  font-size: 15px;
-  margin: 0;
-
+.project-info h3 {
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 10%;
+  margin-bottom: 3%;
 }
-.project-info a{
-  margin-top: 15px;
-  font-size: 15px;
-  line-height: 35px;
-  width: 35px;
-  height: 35px;
+
+.project-info a {
+  margin-top: 20px;
+  color: black;
+  text-decoration: none;
+  font-size: 20px;
+  line-height: 45px;
+  background-color: white;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
 }
