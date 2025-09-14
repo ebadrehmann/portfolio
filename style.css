@@ -150,8 +150,21 @@ header {
 
 .about-2 span{
   color: rgb(200, 16, 46);
-  font-weight: 700;
 }
+.about-text span{
+  color: rgb(200, 16, 46);
+  animation: horizontal-shaking 0.35s infinite;
+  display: inline-block;
+}
+
+@keyframes horizontal-shaking {
+  0% { transform: translateX(0) }
+  25% { transform: translateX(5px) }
+  50% { transform: translateX(-5px) }
+  75% { transform: translateX(5px) }
+  100% { transform: translateX(0) }
+}
+
 
 .subtitle{
   font-size: 35px;
@@ -220,4 +233,40 @@ header {
   animation: fadeIn .5s;
 }
 
-  /* services */
+  /* work */
+
+#work{
+  height: 100vh;
+}
+
+.projects{
+  
+  grid-template-columns: none;
+  grid-template-rows: 50% 50%;
+  grid-auto-flow: column;
+  grid-gap: 50px;
+  align-items: center;
+}
+  
+.project {
+  width: 80%;
+  margin: 0 auto;
+  border-radius: 10%;
+}
+
+.project-info {
+  font-size: 12px;
+}
+
+.project-info h3{
+  font-size: 15px;
+  margin: 0;
+
+}
+.project-info a{
+  margin-top: 15px;
+  font-size: 15px;
+  line-height: 35px;
+  width: 35px;
+  height: 35px;
+}
