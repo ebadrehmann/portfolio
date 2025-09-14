@@ -21,7 +21,7 @@ header {
   background-size: 50%;
   background-position: right;
   background-repeat: no-repeat;
-  background-image: url(images/image-1.jpg);
+  background-image: url(assets/image-1.jpg);
 }
 @keyframes fadeIn {
   from {
@@ -303,3 +303,33 @@ header {
   height: 45px;
   border-radius: 50%;
 }
+
+
+ /* contact */
+
+ #contact {
+  text-align: center;
+  height: 45px;
+}
+
+ .socials i{
+  font-size: 30px;
+  margin: 0 .5%;
+  color: white;
+  transition: transform 0.5s;
+ }
+
+ .socials i:hover{
+  color: rgb(200, 16, 46);
+  transform: translateY(-5px);
+ }
+
+ #copyright{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  font-weight: bold;
+  background: #262626;
+
+ }
